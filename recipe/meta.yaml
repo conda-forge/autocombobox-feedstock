@@ -1,5 +1,5 @@
 {% set name = "autocombobox" %}
-{% set version = "1.5.0" %}
+{% set version = "1.5.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/autocombobox-{{ version }}.tar.gz
-  sha256: 222d8c7332a46440933ff1031dd2ca5355f87de20e8d2cf5f7c17bcb438f9f8c
+  sha256: d0dc526edb590db824607521bc5efe6d5f634d98253630784e515c79b65221f1
 
 build:
   noarch: python
