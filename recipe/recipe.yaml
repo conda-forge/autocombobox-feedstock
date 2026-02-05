@@ -1,0 +1,43 @@
+schema_version: 1
+
+context:
+  name: autocombobox
+  version: 1.5.1
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/autocombobox-${{ version }}.tar.gz
+  sha256: d0dc526edb590db824607521bc5efe6d5f634d98253630784e515c79b65221f1
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatchling
+    - pip
+  run:
+    - python >=${{ python_min }}
+
+tests:
+  - python:
+      imports:
+        - autocombobox
+      pip_check: true
+      python_version: ${{ python_min }}.*
+
+about:
+  summary: Ttk widge that insert a Combobox into GUIs that allows suggestions based on what the user writes
+  license: GPL-3.0-only
+  license_file: LICENSE
+  homepage: https://github.com/Church-17/autocombobox
+
+extra:
+  recipe-maintainers:
+    - thewchan
