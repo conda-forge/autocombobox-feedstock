@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: autocombobox
-  version: "1.7.1"
+  version: "1.7.2"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/autocombobox-${{ version }}.tar.gz
-  sha256: 8cecd6b10d90c79280c9dc667b00385b22504484888647e9e51f92d1e6f1e43e
+  sha256: e9e4f55ceb5bb80fa9100fefccca31040c5313a975fece20dad9fae9c97cdc60
 
 build:
   number: 0
